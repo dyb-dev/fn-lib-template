@@ -1,0 +1,105 @@
+{
+    "name": "fn-lib-template",
+    "version": "0.0.1",
+    "description": "基于`vite`搭建的函数库模版",
+    "author": "dyb",
+    "license": "MIT",
+    "type": "module",
+    "private": false,
+    "main": "./dist/cjs/index.cjs.js",
+    "module": "./dist/es/index.es.js",
+    "types": "./dist/types/index.d.ts",
+    "unpkg": "./dist/umd/index.umd.js",
+    "jsdelivr": "./dist/umd/index.umd.js",
+    "exports": {
+        ".": {
+            "types": "./dist/types/index.d.ts",
+            "import": "./dist/es/index.es.js",
+            "require": "./dist/cjs/index.cjs.js",
+            "umd": "./dist/umd/index.umd.js"
+        }
+    },
+    "files": [
+        "dist",
+        "package.json",
+        "README.md"
+    ],
+    "scripts": {
+        "build": "vite build & tsc -p tsconfig.lib.json",
+        "docs:dev": "vitepress dev docs",
+        "docs:build": "pnpm docs:type-check & pnpm docs:build-only",
+        "docs:build-only": "vitepress build docs",
+        "docs:preview": "vitepress preview docs",
+        "docs:type-check": "vue-tsc --build --force"
+    },
+    "engines": {
+        "node": ">=18.0.0",
+        "pnpm": ">=8.15.5"
+    },
+    "pnpm": {
+        "peerDependencyRules": {
+            "ignoreMissing": [
+                "@algolia/client-search",
+                "search-insights"
+            ]
+        }
+    },
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dyb-dev/fn-lib-template"
+    },
+    "keywords": [
+        "docs",
+        "vite",
+        "typescript",
+        "library",
+        "template",
+        "fn-lib",
+        "function-library"
+    ],
+    "devDependencies": {
+        "@types/node": "^20.11.25",
+        "@typescript-eslint/eslint-plugin": "^6.2.1",
+        "@typescript-eslint/parser": "^6.2.1",
+        "@vitepress-demo-preview/component": "^2.3.2",
+        "@vitepress-demo-preview/plugin": "^1.2.3",
+        "eslint": "^8.57.0",
+        "eslint-import-resolver-typescript": "^3.6.1",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-jsdoc": "^48.2.3",
+        "eslint-plugin-jsonc": "^2.15.1",
+        "eslint-plugin-vue": "^9.25.0",
+        "portfinder-sync": "^0.0.2",
+        "prettier": "^3.3.2",
+        "prettier-eslint": "^16.3.0",
+        "sass": "^1.75.0",
+        "stylelint": "^16.3.1",
+        "stylelint-config-rational-order": "^0.1.2",
+        "stylelint-config-recommended-vue": "^1.5.0",
+        "stylelint-config-standard-scss": "^13.1.0",
+        "stylelint-order": "^6.0.4",
+        "stylelint-prettier": "^5.0.0",
+        "typescript": "^5.4.5",
+        "vite": "^5.3.3",
+        "unplugin-vue-components": "^0.27.4",
+        "vite-plugin-mkcert": "^1.17.5",
+        "vite-plugin-pwa": "^0.20.1",
+        "vitepress": "^1.2.3",
+        "vue-tsc": "^2.0.26",
+        "workbox-cacheable-response": "^7.1.0",
+        "workbox-core": "^7.1.0",
+        "workbox-precaching": "^7.1.0",
+        "workbox-routing": "^7.1.0",
+        "workbox-strategies": "^7.1.0",
+        "workbox-window": "^7.1.0",
+        "ant-design-vue": "^4.2.3",
+        "@ant-design/icons-vue": "^7.0.1",
+        "dayjs": "^1.11.12",
+        "vue": "^3.4.30",
+        "vconsole": "^3.15.1",
+        "vue3-json-viewer": "^2.2.2"
+    }
+}

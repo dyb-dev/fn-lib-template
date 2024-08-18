@@ -1,0 +1,23 @@
+/*
+ * @Author: dyb
+ * @Date: 2023-11-08 15:55:25
+ * @LastEditors: dyb
+ * @LastEditTime: 2024-08-18 00:52:24
+ * @FilePath: /jet-lib-test/tsconfig.json
+ * @Description: ts配置文件
+ */
+
+{
+    "files": [],
+    "references": [
+        {
+            "path": "./tsconfig.lib.json"
+        },
+        {
+            "path": "./tsconfig.docs.json"
+        }
+    ],
+    "compilerOptions": {
+        "module": "NodeNext"
+    }
+}
