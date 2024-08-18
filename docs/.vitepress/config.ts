@@ -2,7 +2,7 @@
  * @Author: dyb
  * @Date: 2024-06-24 19:59:56
  * @LastEditors: dyb
- * @LastEditTime: 2024-08-18 19:30:19
+ * @LastEditTime: 2024-08-18 19:33:30
  * @FilePath: /fn-lib-template/docs/.vitepress/config.ts
  * @Description: VitePress配置文件
  */
@@ -128,7 +128,7 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
             },
             // 页面编辑链接配置
             editLink: {
-                pattern: "https://github.com/dyb-dev/fn-lib-template/docs/tree/main/docs/src/views/:path",
+                pattern: "https://github.com/dyb-dev/fn-lib-template/tree/main/docs/src/views/:path",
                 text: "为此页面提供修改建议"
             },
 
