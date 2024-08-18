@@ -420,4 +420,4 @@ import { spliceAssetsPath } from "@/utils"
 
 ## 更多 {#more}
 
-查看文档获取 [完整的 Markdown 扩展列表](https://vitepress.dev/zh/vitepress/markdown)。
+查看文档获取 [完整的 Markdown 扩展列表](https://vitepress.dev/zh/guide/markdown)。

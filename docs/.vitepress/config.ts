@@ -2,7 +2,7 @@
  * @Author: dyb
  * @Date: 2024-06-24 19:59:56
  * @LastEditors: dyb
- * @LastEditTime: 2024-08-18 18:16:38
+ * @LastEditTime: 2024-08-18 19:30:19
  * @FilePath: /fn-lib-template/docs/.vitepress/config.ts
  * @Description: VitePress配置文件
  */
@@ -122,13 +122,13 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
             footer: {
                 // 页脚文本
                 message:
-                    'Released under the <a href="https://github.com/dyb-dev/fn-lib-template/blob/master/LICENSE" target="_blank">MIT License</a>.',
+                    'Released under the <a href="https://github.com/dyb-dev/fn-lib-template/blob/main/LICENSE" target="_blank">MIT License</a>.',
                 // 版权信息
                 copyright: 'Copyright © 2019-present <a href="https://github.com/dyb-dev" target="_blank">dyb</a>'
             },
             // 页面编辑链接配置
             editLink: {
-                pattern: "https://github.com/dyb-dev/fn-lib-template/tree/master/src/views/:path",
+                pattern: "https://github.com/dyb-dev/fn-lib-template/docs/tree/main/docs/src/views/:path",
                 text: "为此页面提供修改建议"
             },
 
@@ -201,7 +201,7 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
             }
         },
 
-        // markdown-it配置（作用于`markdown`文件） 示例:(https://vitepress.dev/zh/vitepress/markdown#advanced-configuration)
+        // markdown-it配置（作用于`markdown`文件）
         markdown: {
             config(md) {
 
