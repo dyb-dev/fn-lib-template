@@ -1,7 +1,7 @@
 /*
- * @Author: dyb
+ * @Author: dyb-dev
  * @Date: 2024-03-20 16:17:30
- * @LastEditors: dyb
+ * @LastEditors: dyb-dev
  * @LastEditTime: 2024-04-29 16:36:00
  * @FilePath: /vue_pinia_vite/.stylelintrc.mjs
  * @Description: stylelint配置文件 注意：每次配置文件的更改，建议重启一下vscode，否则可能不会生效

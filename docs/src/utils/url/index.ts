@@ -1,7 +1,7 @@
 /*
- * @Author: dyb
+ * @Author: dyb-dev
  * @Date: 2024-06-28 14:19:02
- * @LastEditors: dyb
+ * @LastEditors: dyb-dev
  * @LastEditTime: 2024-08-18 17:50:27
  * @FilePath: /fn-lib-template/docs/src/utils/url/index.ts
  * @Description: url模块
@@ -10,7 +10,7 @@
 /**
  * 拼接资源路径
  *
- * @author dyb
+ * @author dyb-dev
  * @date 28/06/2024/  14:25:30
  * @export
  * @param {string} subPath - 子路径
@@ -55,7 +55,7 @@ const spliceAssetsPath = (subPath: string): string => {
 /**
  * 根据开关移除 url 的斜杠
  *
- * @author dyb
+ * @author dyb-dev
  * @date 23/07/2024/  20:28:05
  * @export
  * @param {string} url - 需要处理的url
@@ -86,7 +86,7 @@ const removeSlashBySwitch = (url: string, options: { isStart?: boolean; isEnd?: 
 /**
  * 获取当前地址
  *
- * @author dyb
+ * @author dyb-dev
  * @date 14/06/2023/  00:57:34
  * @returns {string} 当前地址, 默认返回值:> http://localhost/
  */
@@ -104,7 +104,7 @@ const getCurUrl = (): string => {
 /**
  * 判断是否是绝对路径
  *
- * @author dyb
+ * @author dyb-dev
  * @date 17/04/2023/  09:55:55
  * @param {string} str 需要判断的字符串
  * @returns {boolean} 是否是绝对路径
@@ -119,7 +119,7 @@ const isAbsoluteUrl = (str: string): boolean => {
 /**
  * 获取指定URL的子目录
  *
- * @author dyb
+ * @author dyb-dev
  * @date 23/07/2024/  20:32:18
  * @param {string} [url=location.href] - 需要解析的 URL
  * @returns {*}  {string}

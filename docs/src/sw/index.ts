@@ -1,7 +1,7 @@
 /**
  * registerType: 'autoUpdate' 时需执行此函数，自动刷新页面更新ServiceWorker（注意：一定要写在入口文件最顶部）
  *
- * @author dyb
+ * @author dyb-dev
  * @date 24/04/2024/  10:54:36
  */
 const setupServiceWorker = async() => {

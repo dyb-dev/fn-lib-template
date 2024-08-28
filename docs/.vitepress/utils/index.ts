@@ -1,3 +1,12 @@
+/*
+ * @Author: dyb-dev
+ * @Date: 2024-08-18 01:04:01
+ * @LastEditors: dyb-dev
+ * @LastEditTime: 2024-08-21 15:27:42
+ * @FilePath: /fn-lib-template/docs/.vitepress/utils/index.ts
+ * @Description: 构建工具函数模块
+ */
+
 import { networkInterfaces } from "os"
 import { resolve, basename } from "path"
 
@@ -9,7 +18,7 @@ import pkg from "../../../package.json"
 /**
  * FUN: 生成项目信息
  *
- * @author dyb
+ * @author dyb-dev
  * @date 15/08/2024/  20:42:38
  * @export
  * @param {ImportMetaEnv} env - 环境变量
@@ -37,7 +46,7 @@ const generateProjectInfo = (env: ImportMetaEnv): IProjectInfo => {
 /**
  * FUN: 获取可用IPv4主机ip(192.168.10.191)
  *
- * @author dyb
+ * @author dyb-dev
  * @date 26/03/2024/  22:56:49
  * @export
  * @returns {*}  {string}
@@ -69,7 +78,7 @@ interface ISetupVitePWAParam {
 /**
  * FUN: 设置VitePWA插件
  *
- * @author dyb
+ * @author dyb-dev
  * @date 24/04/2024/  16:42:29
  * @export
  * @param {ISetupVitePWAParam} param - 参数

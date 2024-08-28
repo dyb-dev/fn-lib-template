@@ -1,7 +1,7 @@
 /*
- * @Author: dyb
+ * @Author: dyb-dev
  * @Date: 2024-04-24 16:44:44
- * @LastEditors: dyb
+ * @LastEditors: dyb-dev
  * @LastEditTime: 2024-07-31 17:11:16
  * @FilePath: /vue_pinia_vite2.0/src/sw/sw.ts
  * @Description: 控制 Service Worker 脚本文件
