@@ -2,13 +2,13 @@
  * @Author: dyb-dev
  * @Date: 2024-08-20 23:10:28
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-08-22 11:16:45
+ * @LastEditTime: 2024-08-30 17:27:57
  * @FilePath: /fn-lib-template/tsconfig.node.json
  * @Description: node环境ts配置
  */
 
 {
-    "extends": "@tsconfig/node20/tsconfig.json",
+    "extends": "@dyb-dev/ts-config/node",
     "include": [
         "docs/src/views/**/*.ts",
         "docs/.vitepress/utils/**/*.ts",
@@ -20,20 +20,10 @@
     ],
     "exclude": ["node_modules", "**/node_modules", ".history"],
     "compilerOptions": {
-        // 启用增量编译模式
-        "composite": true,
+        // 指定要包含的类型定义文件
+        "types": ["@dyb-dev/ts-config/types"],
         // 指定用于存储 TypeScript 编译器在增量编译模式下生成的编译信息的文件路径，以便下次编译时可以使用
         "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-        // 不允许隐式的any类型存在
-        "noImplicitAny": true,
-        // 跳过对所有定义文件（即 .d.ts 文件）的类型检查
-        "skipLibCheck": true,
-        // ts编译只做类型检查，不生成js文件
-        "noEmit": true,
-        // 导入类型时 必须使用 import type 语法
-        "verbatimModuleSyntax": true,
-        // 导入模块时允许使用.ts或者.js文件后缀
-        "allowImportingTsExtensions": true,
         // 指定生成 ECMAScript Next 模块系统的代码
         "module": "ESNext",
         // 指定模块解析策略
