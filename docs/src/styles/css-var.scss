@@ -2,12 +2,12 @@
  * @Author: dyb-dev
  * @Date: 2024-04-29 20:37:35
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-08-30 17:29:01
+ * @LastEditTime: 2024-08-31 22:23:29
  * @FilePath: /fn-lib-template/docs/src/styles/css-var.scss
  * @Description: css全局变量文件
  */
 
-:root:root {
+:root {
     --color-black: #000;
     --color-white: #fff;
     --color-background: var(--color-white);
@@ -20,7 +20,7 @@
 
 /** 检测用户系统的偏好主题模式是否为暗色模式（Dark Mode） */
 @media (prefers-color-scheme: dark) {
-    :root:root {
+    :root {
         --color-background: var(--color-black);
         --color-text: var(--color-white);
     }
