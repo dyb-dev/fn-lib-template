@@ -2,8 +2,8 @@
  * @Author: dyb-dev
  * @Date: 2024-06-24 19:59:56
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-08-15 17:01:04
- * @FilePath: /vitepress练习/.vitepress/theme/index.ts
+ * @LastEditTime: 2024-09-01 22:19:11
+ * @FilePath: /fn-lib-template/docs/.vitepress/theme/index.ts
  * @Description: 扩展主题、扩展vue应用配置文件
  */
 
@@ -17,10 +17,10 @@ import Layout from "./Layout.vue"
 
 import type { Theme } from "vitepress"
 
+import "ant-design-vue/dist/reset.css"
 import "vue3-json-viewer/dist/index.css"
 import "@vitepress-demo-preview/component/dist/style.css"
 import "../../src/styles/index.scss"
-import "./style.css"
 
 export default {
     // 继承 VitePress 的默认主题

@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-06-24 19:59:56
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-08-30 17:29:49
+ * @LastEditTime: 2024-09-01 22:16:48
  * @FilePath: /fn-lib-template/docs/.vitepress/config.ts
  * @Description: VitePress配置文件
  */
@@ -11,8 +11,6 @@ import { resolve } from "path"
 
 import { containerPreview, componentPreview } from "@vitepress-demo-preview/plugin"
 import { getPort } from "portfinder-sync"
-import { AntDesignVueResolver } from "unplugin-vue-components/resolvers"
-import ViteVueComponents from "unplugin-vue-components/vite"
 import ViteMkcertPlugin from "vite-plugin-mkcert"
 import { defineConfig, loadEnv } from "vitepress"
 
@@ -266,21 +264,6 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
             },
 
             plugins: [
-                // 自动导入并注册组件, 并生成类型声明文件
-                ViteVueComponents({
-                    resolvers: [
-                        // 按需自动导入Ant相关组件
-                        AntDesignVueResolver({
-                            //由于Ant内部使用了 css in js 技术，所以关闭自动导入组件样式
-                            importStyle: false,
-                            // 是否自动导入图标组件
-                            resolveIcons: true,
-                            // 必须使用 commonjs 规范导入组件，否则构建会报错
-                            cjs: true
-                        })
-                    ],
-                    dts: resolve(projectRootDir, "./src/types/components.d.ts")
-                }),
                 // 是否使用 PWA 离线访问 当 preview 时，带有路径前缀，则浏览器地址栏需要添加 index.html，因为PWA的缓存路径带有index.html，否则离线刷新页面会出现404
                 VITE_PWA === "true" &&
                     setupVitePWAPlugin({

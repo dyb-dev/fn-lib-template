@@ -56,9 +56,6 @@ importers:
       typescript:
         specifier: ^5.4.5
         version: 5.5.4
-      unplugin-vue-components:
-        specifier: ^0.27.4
-        version: 0.27.4(@babel/parser@7.25.6)(rollup@4.21.2)(vue@3.4.38(typescript@5.5.4))
       vconsole:
         specifier: ^3.15.1
         version: 3.15.1
@@ -186,9 +183,6 @@ packages:
     resolution: {integrity: sha512-eCqY2unfZK6Fe02AwFlDHLfoyEFreP6rBwAZMIJ1LugmfMiVgwWDYlp1YsRugaPtICYOabV1iWxXdP12u9U43Q==}
     peerDependencies:
       vue: '>=3.0.3'
-
-  '@antfu/utils@0.7.10':
-    resolution: {integrity: sha512-+562v9k4aI80m1+VuMHehNJWLOFjBnXn3tdOitzD0il5b7smkSBal4+a3oKiQTbrwMmN/TBUMDvbdoWDehgOww==}
 
   '@apideck/better-ajv-errors@0.3.6':
     resolution: {integrity: sha512-P+ZygBLZtkp0qqOAJJVX4oX/sFo5JR3eBWwwuqHHhK0GIgQOKWrAfiAaWX0aArHkRWHMuggFEgAZNxVPwPZYaA==}
@@ -4437,23 +4431,6 @@ packages:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
 
-  unplugin-vue-components@0.27.4:
-    resolution: {integrity: sha512-1XVl5iXG7P1UrOMnaj2ogYa5YTq8aoh5jwDPQhemwO/OrXW+lPQKDXd1hMz15qxQPxgb/XXlbgo3HQ2rLEbmXQ==}
-    engines: {node: '>=14'}
-    peerDependencies:
-      '@babel/parser': ^7.15.8
-      '@nuxt/kit': ^3.2.2
-      vue: 2 || 3
-    peerDependenciesMeta:
-      '@babel/parser':
-        optional: true
-      '@nuxt/kit':
-        optional: true
-
-  unplugin@1.12.2:
-    resolution: {integrity: sha512-bEqQxeC7rxtxPZ3M5V4Djcc4lQqKPgGe3mAWZvxcSmX5jhGxll19NliaRzQSQPrk4xJZSGniK3puLWpRuZN7VQ==}
-    engines: {node: '>=14.0.0'}
-
   unset-value@1.0.0:
     resolution: {integrity: sha512-PcA2tsuGSF9cnySLHTLSh2qrQiJ70mn+r+Glzxv2TWZblxsxCC52BDlZoPCsz7STd9pN7EZetkWZBAvk4cgZdQ==}
     engines: {node: '>=0.10.0'}
@@ -4626,13 +4603,6 @@ packages:
 
   webidl-conversions@4.0.2:
     resolution: {integrity: sha512-YQ+BmxuTgd6UXZW3+ICGfyqRyHXVlD5GtQr5+qjiNW7bF0cqrzX500HVXPBOvgXb5YnzDd+h0zqyv61KUD7+Sg==}
-
-  webpack-sources@3.2.3:
-    resolution: {integrity: sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==}
-    engines: {node: '>=10.13.0'}
-
-  webpack-virtual-modules@0.6.2:
-    resolution: {integrity: sha512-66/V2i5hQanC51vBQKPH4aI8NMAcBW59FVBs+rC7eGHupMyfn34q7rZIE+ETlJ+XTevqfUhVVBgSUNSW2flEUQ==}
 
   whatwg-url@7.1.0:
     resolution: {integrity: sha512-WUu7Rg1DroM7oQvGWfOiAK21n74Gg+T4elXEQYkOhtyLeWiJFoOGLXPKI/9gzIie9CtwVLm8wtw6YJdKyxSjeg==}
@@ -4862,8 +4832,6 @@ snapshots:
       '@ant-design/colors': 6.0.0
       '@ant-design/icons-svg': 4.4.2
       vue: 3.4.38(typescript@5.5.4)
-
-  '@antfu/utils@0.7.10': {}
 
   '@apideck/better-ajv-errors@0.3.6(ajv@8.17.1)':
     dependencies:
@@ -9629,32 +9597,6 @@ snapshots:
 
   universalify@2.0.1: {}
 
-  unplugin-vue-components@0.27.4(@babel/parser@7.25.6)(rollup@4.21.2)(vue@3.4.38(typescript@5.5.4)):
-    dependencies:
-      '@antfu/utils': 0.7.10
-      '@rollup/pluginutils': 5.1.0(rollup@4.21.2)
-      chokidar: 3.6.0
-      debug: 4.3.6
-      fast-glob: 3.3.2
-      local-pkg: 0.5.0
-      magic-string: 0.30.11
-      minimatch: 9.0.5
-      mlly: 1.7.1
-      unplugin: 1.12.2
-      vue: 3.4.38(typescript@5.5.4)
-    optionalDependencies:
-      '@babel/parser': 7.25.6
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
-
-  unplugin@1.12.2:
-    dependencies:
-      acorn: 8.12.1
-      chokidar: 3.6.0
-      webpack-sources: 3.2.3
-      webpack-virtual-modules: 0.6.2
-
   unset-value@1.0.0:
     dependencies:
       has-value: 0.3.1
@@ -9868,10 +9810,6 @@ snapshots:
       loose-envify: 1.4.0
 
   webidl-conversions@4.0.2: {}
-
-  webpack-sources@3.2.3: {}
-
-  webpack-virtual-modules@0.6.2: {}
 
   whatwg-url@7.1.0:
     dependencies:

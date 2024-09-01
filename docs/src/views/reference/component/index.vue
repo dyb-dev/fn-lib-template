@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { theme } from "ant-design-vue"
+import { StarTwoTone } from "@ant-design/icons-vue"
+import { theme, App, Space, Tag } from "ant-design-vue"
 import { useData } from "vitepress"
 import { reactive } from "vue"
 
@@ -24,27 +25,27 @@ const data = reactive({
 </script>
 
 <template>
-    <a-app>
-        <a-space style="width: 100%" direction="vertical">
-            <a-tag class="tag" :bordered="false" :color="data.antThemeConfig.colorPrimary">
+    <App>
+        <Space style="width: 100%" direction="vertical">
+            <Tag class="tag" :bordered="false" :color="data.antThemeConfig.colorPrimary">
                 <template #icon>
                     <StarTwoTone :two-tone-color="data.antThemeConfig.colorPrimary" />
                 </template>
                 vitepress 站点配置
-            </a-tag>
+            </Tag>
 
             <JsonViewer :value="data.siteConfig" :expand-depth="1" />
 
-            <a-tag class="tag" :bordered="false" :color="data.antThemeConfig.colorPrimary">
+            <Tag class="tag" :bordered="false" :color="data.antThemeConfig.colorPrimary">
                 <template #icon>
                     <StarTwoTone :two-tone-color="data.antThemeConfig.colorPrimary" />
                 </template>
                 Ant 主题配置
-            </a-tag>
+            </Tag>
 
             <JsonViewer :value="data.antThemeConfig" />
-        </a-space>
-    </a-app>
+        </Space>
+    </App>
 </template>
 
 <style lang="scss" scoped>
