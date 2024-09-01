@@ -10,6 +10,7 @@ const projectRootDir = process.cwd()
 
 export default defineConfig({
     plugins: [
+        // 生成ts声明文件
         ViteDts({
             // 指定要生成.d.ts的源文件 默认: tsconfig.app.json 的 `include` 选项
             include: ["src/**/*.ts", "src/**/*.d.ts"],
@@ -57,7 +58,7 @@ export default defineConfig({
             }
         }
 
-        // TODO: 如果有不想打包进库的依赖，可以在这里配置
+        // TODO: 如果有不想打包进库的依赖，可以在这里配置，记得配置 package.json 的 peerDependencies 选项
         // rollupOptions: {
         //     // 确保外部化处理那些你不想打包进库的依赖
         //     external: ["dayjs"],
