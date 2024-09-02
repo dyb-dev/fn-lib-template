@@ -248,7 +248,7 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
                 preprocessorOptions: {
                     scss: {
                         additionalData: `
-                            @use "${projectRootDir}/src/styles/variables.scss" as *;
+                            @use "${projectRootDir}/src/styles/scss-var.scss" as *;
                             @use "${projectRootDir}/src/styles/mixins/index.scss" as *;
                             @use "${projectRootDir}/src/styles/funs/index.scss" as *;
                         `
