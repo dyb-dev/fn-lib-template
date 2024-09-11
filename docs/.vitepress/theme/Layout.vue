@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-07-01 22:28:05
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-01 22:20:37
+ * @LastEditTime: 2024-09-11 22:29:36
  * @FilePath: /fn-lib-template/docs/.vitepress/theme/Layout.vue
  * @Description: 自定义vitepress主题组件
 -->
@@ -13,7 +13,7 @@ import { theme, ConfigProvider } from "ant-design-vue"
 import zhCN from "ant-design-vue/lib/locale/zh_CN"
 import { useData } from "vitepress"
 import DefaultTheme from "vitepress/theme"
-import { reactive } from "vue"
+import { onMounted, reactive, ref } from "vue"
 
 // 由于Ant日期类组件内部用到了dayjs，而dayjs默认: 英文版本，所以需要导入dayjs中文版本
 import "dayjs/locale/zh-cn"
@@ -33,6 +33,19 @@ const data = reactive({
 
 /** STATIC: 首页logo大图路径 */
 const homeHeroImagePath = spliceAssetsPath("/image/logo-large.webp")
+
+/** REF: 动态获取的主题颜色 */
+const primaryColor = ref<string>("")
+
+/** LIFECYCLE: 渲染 */
+onMounted(() => {
+
+    // 获取根元素的样式
+    const _rootStyles = getComputedStyle(document.documentElement)
+    // 获取 vitepress 的主题颜色
+    primaryColor.value = _rootStyles.getPropertyValue("--vp-c-brand-3").trim()
+
+})
 </script>
 
 <template>
@@ -41,7 +54,7 @@ const homeHeroImagePath = spliceAssetsPath("/image/logo-large.webp")
         :theme="{
             algorithm: data.siteConfig.isDark ? theme.darkAlgorithm : theme.defaultAlgorithm,
             token: {
-                colorPrimary: '#00b96b'
+                colorPrimary: primaryColor
             }
         }"
     >
