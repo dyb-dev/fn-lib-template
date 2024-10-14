@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-07-01 22:28:05
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-09-11 22:29:36
+ * @LastEditTime: 2024-10-14 12:19:41
  * @FilePath: /fn-lib-template/docs/.vitepress/theme/Layout.vue
  * @Description: 自定义vitepress主题组件
 -->
@@ -66,4 +66,40 @@ onMounted(() => {
     </ConfigProvider>
 </template>
 
-<!-- <style lang="scss" scoped></style> -->
+<style lang="scss" scoped>
+.Layout {
+    @media (min-width: 1440px) {
+        /** 存在左侧边栏时 设置顶部栏样式 */
+        &:deep(.VPNav .has-sidebar .wrapper .container > .title) {
+            width: var(--vp-sidebar-width);
+            padding: 0 32px;
+        }
+
+        &:deep(.VPNav .has-sidebar .wrapper .container > .content) {
+            padding-right: 32px;
+            padding-left: var(--vp-sidebar-width);
+        }
+
+        &:deep(.VPNav .has-sidebar > .divider) {
+            padding-left: var(--vp-sidebar-width);
+        }
+
+        /** 设置左侧边栏样式 */
+        &:deep(.VPSidebar) {
+            width: var(--vp-sidebar-width);
+            padding: var(--vp-nav-height) 32px 96px;
+        }
+
+        /** 存在左侧边栏时 设置中间内容样式 */
+        &:deep(.VPContent.has-sidebar) {
+            margin: var(--vp-layout-top-height, 0px) 0 0;
+            padding-right: 0;
+            padding-left: var(--vp-sidebar-width);
+        }
+
+        &:deep(.VPContent .has-sidebar .container .content > .content-container) {
+            max-width: none;
+        }
+    }
+}
+</style>
