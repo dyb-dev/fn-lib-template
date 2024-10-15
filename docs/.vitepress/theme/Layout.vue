@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-07-01 22:28:05
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-10-14 12:19:41
+ * @LastEditTime: 2024-10-16 00:31:04
  * @FilePath: /fn-lib-template/docs/.vitepress/theme/Layout.vue
  * @Description: 自定义vitepress主题组件
 -->
@@ -17,7 +17,7 @@ import { onMounted, reactive, ref } from "vue"
 
 // 由于Ant日期类组件内部用到了dayjs，而dayjs默认: 英文版本，所以需要导入dayjs中文版本
 import "dayjs/locale/zh-cn"
-import { spliceAssetsPath } from "@/utils"
+import { toAssetsAbsoluteUrl } from "@/utils"
 
 // 可使用自定义插槽 示例:(https://vitepress.dev/zh/guide/extending-default-theme#layout-slots)
 const { Layout } = DefaultTheme
@@ -30,9 +30,6 @@ const data = reactive({
     /** `vitepress`当前站点配置 */
     siteConfig
 })
-
-/** STATIC: 首页logo大图路径 */
-const homeHeroImagePath = spliceAssetsPath("/image/logo-large.webp")
 
 /** REF: 动态获取的主题颜色 */
 const primaryColor = ref<string>("")
@@ -59,8 +56,9 @@ onMounted(() => {
         }"
     >
         <Layout>
+            <!-- 首页logo大图 -->
             <template #home-hero-image>
-                <img class="VPImage image-src" :src="homeHeroImagePath" alt="图片加载错误" />
+                <img class="VPImage image-src" :src="toAssetsAbsoluteUrl('/image/logo-large.webp')" alt="图片加载错误" />
             </template>
         </Layout>
     </ConfigProvider>

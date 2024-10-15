@@ -1,6 +1,6 @@
 {
     "name": "fn-lib-template",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "基于`vite`搭建的函数库模版",
     "author": "dyb-dev",
     "license": "MIT",
@@ -80,6 +80,7 @@
         "portfinder-sync": "^0.0.2",
         "prettier": "^3.3.2",
         "prettier-eslint": "^16.3.0",
+        "query-string": "^9.1.1",
         "sass": "^1.75.0",
         "stylelint": "^16.3.1",
         "typescript": "^5.4.5",
