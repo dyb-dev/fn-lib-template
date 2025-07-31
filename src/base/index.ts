@@ -1,8 +1,8 @@
 /*
  * @Author: dyb-dev
  * @Date: 2024-03-10 20:58:19
- * @LastEditors: dyb-dev
- * @LastEditTime: 2024-08-26 23:54:40
+ * @LastEditors: v_zhgtzhong
+ * @LastEditTime: 2025-08-01 00:23:56
  * @FilePath: /fn-lib-template/src/base/index.ts
  * @Description: 用于基础常用相关函数
  */
@@ -16,7 +16,7 @@
  * @param {number} ms - 延时时间
  * @returns {*}  {Promise<void>}
  */
-const delay = (ms: number): Promise<void> => {
+export const delay = (ms: number): Promise<void> => {
 
     return new Promise<void>(resolve => setTimeout(resolve, ms))
 
@@ -35,7 +35,7 @@ type TFuncType = (...args: any[]) => void
  * @param {boolean} [immediate=false] - 是否立即执行
  * @returns {*}  {TFuncType} - 防抖函数
  */
-const preventRepeatExec = (fn: TFuncType, wait: number, immediate = false): TFuncType => {
+export const preventRepeatExec = (fn: TFuncType, wait: number, immediate = false): TFuncType => {
 
     let _timeout: ReturnType<typeof setTimeout> | undefined
 
@@ -70,5 +70,3 @@ const preventRepeatExec = (fn: TFuncType, wait: number, immediate = false): TFun
     }
 
 }
-
-export { delay, preventRepeatExec }
