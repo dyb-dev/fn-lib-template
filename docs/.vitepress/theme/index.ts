@@ -11,7 +11,7 @@
 import { AntDesignContainer } from "@vitepress-demo-preview/component"
 import DefaultTheme from "vitepress/theme"
 
-import { isBrowserEnv, isEnableDebug } from "@/utils"
+import { isClientEnv, isEnableDebug } from "@/utils"
 
 import { setupServiceWorker } from "../../src/sw"
 
@@ -37,8 +37,8 @@ export default {
 
         app.component("demo-preview", AntDesignContainer)
 
-        // 浏览器环境下
-        if (isBrowserEnv()) {
+        // 客户端环境下
+        if (isClientEnv()) {
 
             /** TODO: 如果需要使用 PWA 则解开此段代码 */
             setupServiceWorker()
