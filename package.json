@@ -1,6 +1,6 @@
 {
     "name": "fn-lib-template",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "基于`vite`搭建的函数库模版",
     "author": "dyb-dev",
     "license": "MIT",
@@ -78,6 +78,7 @@
         "@vitepress-demo-preview/component": "^2.3.2",
         "@vitepress-demo-preview/plugin": "^1.2.3",
         "ant-design-vue": "^4.2.5",
+        "copy-to-clipboard": "^3.3.3",
         "dayjs": "^1.11.13",
         "eslint": "^8.57.1",
         "husky": "^9.1.6",
