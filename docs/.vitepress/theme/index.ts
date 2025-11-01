@@ -2,7 +2,7 @@
  * @Author: dyb-dev
  * @Date: 2024-06-24 19:59:56
  * @LastEditors: dyb-dev
- * @LastEditTime: 2024-10-16 00:09:52
+ * @LastEditTime: 2025-11-01 11:31:16
  * @FilePath: /fn-lib-template/docs/.vitepress/theme/index.ts
  * @Description: 扩展主题、扩展vue应用配置文件
  */
@@ -43,12 +43,23 @@ export default {
             /** TODO: 如果需要使用 PWA 则解开此段代码 */
             setupServiceWorker()
 
-            // 根据debug参数判断是否加载vconsole
+            // 根据 debug 参数判断是否加载 eruda
             if (isEnableDebug()) {
 
-                console.log("[项目信息]", __PROJECT_INFO__)
-                const vconsole = await import("vconsole")
-                window.vConsole = new vconsole.default()
+                import("eruda")
+                    .then(({ default: eruda }) => {
+
+                        eruda.init()
+                        window.eruda = eruda
+
+                        console.log("[项目信息]", __PROJECT_INFO__)
+
+                    })
+                    .catch(error => {
+
+                        console.error("eruda 加载失败", error)
+
+                    })
 
             }
 

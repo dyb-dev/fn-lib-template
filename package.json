@@ -1,6 +1,6 @@
 {
     "name": "fn-lib-template",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "description": "基于`vite`搭建的函数库模版",
     "author": "dyb-dev",
     "license": "MIT",
@@ -80,6 +80,8 @@
         "ant-design-vue": "^4.2.5",
         "copy-to-clipboard": "^3.3.3",
         "dayjs": "^1.11.13",
+        "eruda": "^3.4.3",
+        "es-toolkit": "^1.41.0",
         "eslint": "^8.57.1",
         "husky": "^9.1.6",
         "portfinder-sync": "^0.0.2",
@@ -89,7 +91,6 @@
         "sass": "^1.80.3",
         "stylelint": "^16.10.0",
         "typescript": "^5.6.3",
-        "vconsole": "^3.15.1",
         "vite": "^5.4.9",
         "vite-plugin-dts": "~4.0.3",
         "vite-plugin-mkcert": "^1.17.6",
@@ -103,6 +104,7 @@
         "workbox-precaching": "^7.1.0",
         "workbox-routing": "^7.1.0",
         "workbox-strategies": "^7.1.0",
-        "workbox-window": "^7.1.0"
+        "workbox-window": "^7.1.0",
+        "zod": "^4.1.12"
     }
 }
