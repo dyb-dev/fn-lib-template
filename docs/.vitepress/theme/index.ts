@@ -14,6 +14,7 @@ import Layout from "./Layout.vue"
 
 import type { Theme } from "vitepress"
 
+import "virtual:uno.css"
 import "ant-design-vue/dist/reset.css"
 import "vue3-json-viewer/dist/index.css"
 import "@vitepress-demo-preview/component/dist/style.css"
