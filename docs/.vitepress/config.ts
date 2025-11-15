@@ -206,7 +206,7 @@ const configFn: UserConfigFn<DefaultTheme.Config> = ({ mode }) => {
 
         // markdown-it配置（作用于`markdown`文件）
         markdown: {
-            config(md) {
+            config (md) {
 
                 // 支持使用 :::preview 容器预览vue组件
                 md.use(<any>containerPreview)
