@@ -39,7 +39,7 @@ export const preventRepeatExec = (fn: TFuncType, wait: number, immediate = false
         const _this = <any>this
 
         // 延迟执行函数
-        const later = function() {
+        const later = function () {
 
             _timeout = undefined
             if (!immediate) {
